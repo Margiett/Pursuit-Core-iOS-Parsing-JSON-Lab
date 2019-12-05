@@ -33,12 +33,12 @@ class WeatherAPIViewController: UIViewController {
         }
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let detailsController = segue.destination as? WeatherAPIViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            guard let viewController = segue.destination as? ViewController, let indexPath = tableView.indexPathForSelectedRow else {
                 fatalError("the segue needs to be checked")
             }
-            // unknown why i can not call chosenCity
-            ViewController.chosenCity = didSetCitiesInfo[indexPath.row]
-            // ViewController.chosenCity = didSetCitiesInfo[indexPath.row]
+         
+            viewController.chosenCity = didSetCitiesInfo[indexPath.row]
+            
         }
 
     }
