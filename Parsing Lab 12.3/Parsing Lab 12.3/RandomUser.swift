@@ -13,7 +13,7 @@ struct RandomUserData: Codable {
 }
 
 struct RandomUser: Codable {
-    let name: [String:String]
+    let name: UserName
     let location: Address
     let phone: Int
     let dob: DOB
@@ -22,10 +22,16 @@ struct RandomUser: Codable {
     
 }
 
+struct UserName: Codable {
+    var title: String
+    var first: String
+    var last: String
+}
+               
 struct Address: Codable {
-    let street: Street
-    let city: String
-    let country: String
+    var street: Street
+    var city: String
+    var country: String
     
 }
 
@@ -46,7 +52,7 @@ extension RandomUserData {
     static func getRandomUser() -> [RandomUser] {
         var userExtension = [RandomUser]()
 
-        guard let fileURL = Bundle.main.url(forResource: "randomUserData", withExtension: "json") else {
+        guard let fileURL = Bundle.main.url(forResource: "RandomUser", withExtension: "json") else {
             fatalError("there is an issue with the url")
         }
         do {

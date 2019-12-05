@@ -10,7 +10,7 @@ import UIKit
 
 class ColorDetailViewController: UIViewController {
 
-    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var colorView: UIImageView!
         @IBOutlet weak var hexValueLabel: UILabel!
         @IBOutlet weak var redValueLabel: UILabel!
         @IBOutlet weak var greenValueLabel: UILabel!
@@ -39,7 +39,7 @@ class ColorDetailViewController: UIViewController {
             
             let blue = CGFloat(info.rgb.b / 255)
             
-            let hexValue = info.hex["value"] ?? ""
+            let hexValue = info.hex.self
             
             colorView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
             

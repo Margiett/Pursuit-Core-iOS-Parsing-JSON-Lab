@@ -27,7 +27,7 @@ class RandomUserViewController: UIViewController {
         guard let randomUserDetail = segue.destination as? RandomUserDetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
             fatalError("segue did not work.")
         }
-        randomUserDetail.randomUserDetailVC = randomUsersVC[indexPath.row]
+        randomUserDetail.randomUser = randomUsersVC[indexPath.row]
     }
     
 }
@@ -38,6 +38,21 @@ extension RandomUserViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "randomUserCell", for: indexPath)
+        
+        let selectedRandomUser = randomUsersVC[indexPath.row]
+        
+        let randomUserFirstName = selectedRandomUser.name.first ?? ""
+        
+        let randomUserLastName = selectedRandomUser.name.last ?? ""
+        
+        let fullName = ("\(randomUserFirstName) \(randomUserLastName)")
+        
+        cell.textLabel?.text = fullName
+        
+        cell.detailTextLabel?.text = selectedRandomUser.email
+        
+    
         return cell
     }
 }

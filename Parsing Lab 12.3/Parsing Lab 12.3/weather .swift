@@ -36,7 +36,7 @@ extension WeatherData {
     static func getWeatherData() -> [City]{
         var citiesData = [City]()
         
-        guard let fileUrl = Bundle.main.url(forResource: "cities with in the rectangle Zone", withExtension: "json") else {
+        guard let fileUrl = Bundle.main.url(forResource: "Weather", withExtension: "json") else {
             fatalError("could not locate file")
         }
         

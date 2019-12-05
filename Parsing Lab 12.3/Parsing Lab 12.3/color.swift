@@ -8,15 +8,17 @@
 
 import Foundation
 
-struct ColorsBrain: Codable {
-    let results: [Color]
+struct ColorBrian: Codable {
+    let colors: [Color]
 }
-
+ 
 struct Color: Codable {
-    
-    var hex: [String: String]
+    var hex: Hex
     var name: ColorName
     var rgb: RGB
+}
+struct Hex: Codable {
+    var value: String
 }
 
 struct ColorName: Codable {
@@ -29,18 +31,21 @@ struct RGB: Codable {
     var b: Double
 }
 
-extension ColorsBrain {
+extension Color {
     static func getColors() -> [Color]{
+        
         var colorArrInfo = [Color]()
         
-        guard let fileURL = Bundle.main.url(forResource: "colorsData", withExtension: "json") else{
+        guard let fileURL = Bundle.main.url(forResource: "Color", withExtension: "json") else{
             fatalError("unable to get the color data ")
         }
         
         do{
             let data = try Data(contentsOf: fileURL)
-            let colorData = try JSONDecoder().decode(ColorsBrain.self, from: data)
-            colorArrInfo = colorData.results
+            let colorData = try JSONDecoder().decode(ColorBrian.self, from: data)
+            
+            colorArrInfo = colorData.colors
+            
         } catch {
             fatalError("\(error)")
         }

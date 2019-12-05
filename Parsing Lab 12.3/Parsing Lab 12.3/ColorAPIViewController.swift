@@ -12,7 +12,7 @@ class ColorAPIViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var didSetColor = [Color]() {
+    var didSetColor = [Color]() { // is an array because is a collection of information 
    
         didSet {
         tableView.reloadData()
@@ -26,7 +26,8 @@ class ColorAPIViewController: UIViewController {
         
     }
     func loadData() {
-        didSetColor = ColorsBrain.getColors()
+        didSetColor = Color.getColors()
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let colorDetailViewController = segue.destination as? ColorDetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
@@ -52,7 +53,7 @@ extension ColorAPIViewController: UITableViewDataSource {
         
         cell.textLabel?.textColor = .white
         
-        cell.backgroundColor = UIColor(red: CGFloat(selectedColor.rgb.r / 255), green: CGFloat(selectedColor.rgb.g / 255), blue: CGFloat(selectedColor.rgb.b / 255), alpha: 1)
+        cell.backgroundColor = UIColor(red: CGFloat(selectedColor.rgb.r)/255, green: CGFloat(selectedColor.rgb.g) / 255, blue: CGFloat(selectedColor.rgb.b) / 255, alpha: 1)
         
         
         return cell

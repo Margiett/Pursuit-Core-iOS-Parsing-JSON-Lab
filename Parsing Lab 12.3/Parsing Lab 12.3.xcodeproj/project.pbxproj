@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9F0DCA8123983E3D0039EECD /* ColorAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DCA8023983E3D0039EECD /* ColorAPIViewController.swift */; };
+		9F6E58FE239971E900A00711 /* ColorJSON in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E58FD239971E900A00711 /* ColorJSON */; };
+		9F6E59002399AE6200A00711 /* Color.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E58FF2399AE6200A00711 /* Color.json */; };
+		9F6E59022399AEA200A00711 /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E59012399AEA200A00711 /* Weather.json */; };
+		9F6E59042399AED300A00711 /* RandomUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E59032399AED300A00711 /* RandomUser.json */; };
 		9F6F86BA239843E000868ADD /* color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F86B9239843E000868ADD /* color.swift */; };
 		9F6F86BC23984C2800868ADD /* ColorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F86BB23984C2800868ADD /* ColorDetailViewController.swift */; };
 		9F6F86BE23985A1B00868ADD /* RandomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F86BD23985A1B00868ADD /* RandomUser.swift */; };
@@ -27,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		9F0DCA8023983E3D0039EECD /* ColorAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAPIViewController.swift; sourceTree = "<group>"; };
+		9F6E58FD239971E900A00711 /* ColorJSON */ = {isa = PBXFileReference; lastKnownFileType = text; path = ColorJSON; sourceTree = "<group>"; };
+		9F6E58FF2399AE6200A00711 /* Color.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Color.json; sourceTree = "<group>"; };
+		9F6E59012399AEA200A00711 /* Weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Weather.json; sourceTree = "<group>"; };
+		9F6E59032399AED300A00711 /* RandomUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RandomUser.json; sourceTree = "<group>"; };
 		9F6F86B9239843E000868ADD /* color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = color.swift; sourceTree = "<group>"; };
 		9F6F86BB23984C2800868ADD /* ColorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDetailViewController.swift; sourceTree = "<group>"; };
 		9F6F86BD23985A1B00868ADD /* RandomUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser.swift; sourceTree = "<group>"; };
@@ -77,22 +85,26 @@
 			isa = PBXGroup;
 			children = (
 				9F701DCF2397213400973FF1 /* Main.storyboard */,
+				9F6E59012399AEA200A00711 /* Weather.json */,
 				9F701DDD239721B800973FF1 /* weather .swift */,
 				9F701DCD2397213400973FF1 /* ViewController.swift */,
-				9F84714D23986EC100C014B9 /* WeatherDataApi */,
 				9F701DDF2397264500973FF1 /* WeatherAPIViewController.swift */,
-				9F84714F2398778200C014B9 /* RandomUserDataApi */,
-				9F6F86BD23985A1B00868ADD /* RandomUser.swift */,
-				9F847151239878DD00C014B9 /* RandomUserViewController.swift */,
-				9F8471532398844400C014B9 /* RandomUserDetailViewController.swift */,
+				9F6E58FF2399AE6200A00711 /* Color.json */,
 				9F6F86B9239843E000868ADD /* color.swift */,
 				9F6F86BB23984C2800868ADD /* ColorDetailViewController.swift */,
 				9F0DCA8023983E3D0039EECD /* ColorAPIViewController.swift */,
+				9F6E59032399AED300A00711 /* RandomUser.json */,
+				9F6F86BD23985A1B00868ADD /* RandomUser.swift */,
+				9F847151239878DD00C014B9 /* RandomUserViewController.swift */,
+				9F8471532398844400C014B9 /* RandomUserDetailViewController.swift */,
 				9F701DD22397213600973FF1 /* Assets.xcassets */,
 				9F701DD42397213600973FF1 /* LaunchScreen.storyboard */,
 				9F701DC92397213400973FF1 /* AppDelegate.swift */,
 				9F701DCB2397213400973FF1 /* SceneDelegate.swift */,
 				9F701DD72397213600973FF1 /* Info.plist */,
+				9F6E58FD239971E900A00711 /* ColorJSON */,
+				9F84714F2398778200C014B9 /* RandomUserDataApi */,
+				9F84714D23986EC100C014B9 /* WeatherDataApi */,
 			);
 			path = "Parsing Lab 12.3";
 			sourceTree = "<group>";
@@ -158,7 +170,11 @@
 				9F8471502398778200C014B9 /* RandomUserDataApi in Resources */,
 				9F701DD62397213600973FF1 /* LaunchScreen.storyboard in Resources */,
 				9F701DD32397213600973FF1 /* Assets.xcassets in Resources */,
+				9F6E59042399AED300A00711 /* RandomUser.json in Resources */,
 				9F84714E23986EC100C014B9 /* WeatherDataApi in Resources */,
+				9F6E59022399AEA200A00711 /* Weather.json in Resources */,
+				9F6E58FE239971E900A00711 /* ColorJSON in Resources */,
+				9F6E59002399AE6200A00711 /* Color.json in Resources */,
 				9F701DD12397213400973FF1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
