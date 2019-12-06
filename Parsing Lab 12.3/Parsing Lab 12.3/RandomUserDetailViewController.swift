@@ -31,4 +31,6 @@ class RandomUserDetailViewController: UIViewController {
         addressLabel.text = fullAddress
         phoneNumberLabel.text = userDetail.phone.description
     }
+    
+    static func fetchPhoto(completion: @escaping (Result <[RandomUser]>))
 }
