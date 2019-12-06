@@ -9,6 +9,7 @@
 import UIKit
 
 class RandomUserViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     
     var randomUsersVC = [RandomUser]()
@@ -52,7 +53,10 @@ extension RandomUserViewController: UITableViewDataSource {
         
         cell.detailTextLabel?.text = selectedRandomUser.email
         
-    
+        
+        
+        
+        
         return cell
     }
 }

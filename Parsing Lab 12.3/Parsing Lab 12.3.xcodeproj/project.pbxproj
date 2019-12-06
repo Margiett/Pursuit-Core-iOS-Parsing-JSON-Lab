@@ -12,6 +12,7 @@
 		9F6E59002399AE6200A00711 /* Color.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E58FF2399AE6200A00711 /* Color.json */; };
 		9F6E59022399AEA200A00711 /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E59012399AEA200A00711 /* Weather.json */; };
 		9F6E59042399AED300A00711 /* RandomUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E59032399AED300A00711 /* RandomUser.json */; };
+		9F6E59062399E35500A00711 /* NetworkCallFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E59052399E35500A00711 /* NetworkCallFile.swift */; };
 		9F6F86BA239843E000868ADD /* color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F86B9239843E000868ADD /* color.swift */; };
 		9F6F86BC23984C2800868ADD /* ColorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F86BB23984C2800868ADD /* ColorDetailViewController.swift */; };
 		9F6F86BE23985A1B00868ADD /* RandomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F86BD23985A1B00868ADD /* RandomUser.swift */; };
@@ -35,6 +36,7 @@
 		9F6E58FF2399AE6200A00711 /* Color.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Color.json; sourceTree = "<group>"; };
 		9F6E59012399AEA200A00711 /* Weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Weather.json; sourceTree = "<group>"; };
 		9F6E59032399AED300A00711 /* RandomUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RandomUser.json; sourceTree = "<group>"; };
+		9F6E59052399E35500A00711 /* NetworkCallFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCallFile.swift; sourceTree = "<group>"; };
 		9F6F86B9239843E000868ADD /* color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = color.swift; sourceTree = "<group>"; };
 		9F6F86BB23984C2800868ADD /* ColorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDetailViewController.swift; sourceTree = "<group>"; };
 		9F6F86BD23985A1B00868ADD /* RandomUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				9F6F86BD23985A1B00868ADD /* RandomUser.swift */,
 				9F847151239878DD00C014B9 /* RandomUserViewController.swift */,
 				9F8471532398844400C014B9 /* RandomUserDetailViewController.swift */,
+				9F6E59052399E35500A00711 /* NetworkCallFile.swift */,
 				9F701DD22397213600973FF1 /* Assets.xcassets */,
 				9F701DD42397213600973FF1 /* LaunchScreen.storyboard */,
 				9F701DC92397213400973FF1 /* AppDelegate.swift */,
@@ -196,6 +199,7 @@
 				9F847152239878DD00C014B9 /* RandomUserViewController.swift in Sources */,
 				9F701DCA2397213400973FF1 /* AppDelegate.swift in Sources */,
 				9F701DCC2397213400973FF1 /* SceneDelegate.swift in Sources */,
+				9F6E59062399E35500A00711 /* NetworkCallFile.swift in Sources */,
 				9F0DCA8123983E3D0039EECD /* ColorAPIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,14 +23,32 @@ class RandomUserDetailViewController: UIViewController {
     func loadData() {
         guard let userDetail = randomUser else {
             fatalError("there is an issue")
-        }
-        
+                    }
         
         let fullAddress = "\(randomUser.location.street.number) \(randomUser.location.street.name) \(randomUser.location.city) \(randomUser.location.country)"
-        
         addressLabel.text = fullAddress
         phoneNumberLabel.text = userDetail.phone.description
-    }
+        
+        RandomUrlAPI.fetchRandomUser(endpointURLString: "\(randomUser.picture.large)") { (Result<[RandomUserData], NetWorkError>) -> () in
+        switch result {
+        case .failure(let error):
+            let alertController = UIAlertController(title: "Network Error", message: "\(error)" , preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            DispatchQoS.main.async {
+                self.present(alertController, animated: true, completion: nil)
+            }
+        case .success(let image):
+            DispatchQueue.main.async {
+                self.userImageView.image = image
+            }
     
-    static func fetchPhoto(completion: @escaping (Result <[RandomUser]>))
-}
+                }
+            }
+            
+        }
+
+    }
+
+//dump fullAddress
+//userImageView.image = UIImage(data: userImageView)
