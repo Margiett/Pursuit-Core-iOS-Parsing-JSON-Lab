@@ -18,7 +18,7 @@ struct RandomUser: Codable {
     let phone: String
     let dob: DOB
     let email: String
-   let picture: Picture
+    let picture: Picture
     
 }
 
@@ -45,7 +45,7 @@ struct DOB: Codable {
 }
 
 struct Picture: Codable {
-    let large: String
+    let medium: String
 }
 
 extension RandomUserData {

@@ -53,9 +53,7 @@ extension RandomUserViewController: UITableViewDataSource {
         
         cell.detailTextLabel?.text = selectedRandomUser.email
         
-        
-        
-        
+//        cell.UIImage.image = UIImage.init(data: jokes)
         
         return cell
     }

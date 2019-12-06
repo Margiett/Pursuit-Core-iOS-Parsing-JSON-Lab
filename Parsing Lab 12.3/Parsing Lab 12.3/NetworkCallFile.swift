@@ -19,7 +19,7 @@ enum NetWorkError: Error {
 }
 struct RandomUrlAPI {
     
-    static func fetchRandomUser(endpointURLString:String, completion: @escaping (Result<[RandomUserData], NetWorkError>) -> ()) {
+    static func fetchRandomUser(endpointURLString:String, completion: @escaping (Result<Data, NetWorkError>) -> ()) {
        
     
         guard let url = URL(string: endpointURLString) else {
@@ -49,8 +49,8 @@ struct RandomUrlAPI {
                 completion(.failure(.badStatusCode(urlResponse.statusCode)))
                 }
             do {
-                let user = try JSONDecoder().decode([RandomUserData].self, from: data)
-                completion(.success(user))
+//                let user = try JSONDecoder().decode([RandomUserData].self, from: data)
+                completion(.success(data))
             } catch {
                 completion(.failure(.decodingError(error)))
             }
